@@ -80,7 +80,7 @@ router.put('/:id', async (req, res) => {
 
   try {
     const scheme = await Schemes.findById(id);
-
+    
     if (scheme) {
       const updatedScheme = await Schemes.update(changes, id);
       res.json(updatedScheme);
